@@ -1,12 +1,484 @@
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* 
+font-family: 'Lora', serif;
+
+font-family: 'Raleway', sans-serif; */
+
+/*---------------------------- global styles ----------------------------*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, a{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
 h1 {
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 h2 {
+    font-size: 2rem;
+    font-weight: 600; 
 }
 
 h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+p {
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    color: #999999;
+    line-height: 1.8;
 }
 
 ul {
     list-style-type: none;
+}
+
+/*---------------------------- header styles ----------------------------*/
+
+header h1 {
+    float: left;
+}
+
+nav ul {
+   text-align: right;
+   transform: translateY(50%);
+   margin-left: 50px;
+}
+
+nav {
+    padding: 20px;
+}
+nav li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+nav li i {
+    font-size: 1.8rem;
+}
+
+nav li a {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+    nav li a:hover {
+        color: #64a604;
+}
+
+nav li.shop {
+    position: relative;
+}
+
+nav .quantity {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: -25%;
+    bottom: -25%;
+    background-color: #64a604;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hero {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero.home {
+    background-image: url(assets/home-1.jpeg);
+    height: 100vh;
+} 
+
+.hero.blog {
+    background-image: url(assets/blog-1.jpeg);
+    height: 60vh;
+}
+
+.hero.contact1 {
+    background-image: url(assets/contact-1.jpeg);
+    height: 60vh;
+}
+
+.hero.contact2 {
+    background-image: url(assets/contact-2.jpeg);
+    height: 60vh;
+}
+
+/*---------------------------- box styles ----------------------------*/
+
+.box {
+    float: left;
+    width: 50%;
+    height: 485px;
+}
+
+.box img {
+    width: 100%;
+    height: 485px;
+}
+
+.box4 {
+    background-color:#f2f2f2;
+}
+
+.content {
+    height: 100%;
+    text-align: center;
+    padding: 140px 20%;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content .underline {
+    background-color: #64a604;
+    height: 3px;
+    width: 40px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.content button {
+    background-color: #64a604;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 15px 35px;
+    margin-top: 30px;
+}
+
+/*---------------------------- offering styles ----------------------------*/
+
+.offerings {
+    margin: 100px 30px 100px 70px;
+
+}
+
+.offerings li {
+    float: left;
+    margin: 0px 40px;
+    width: calc(50% - 80px);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.offerings li i {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    font-size: 2rem;
+}
+
+/*---------------------------- Our Restaurant styles ----------------------------*/
+
+
+.contentImg {
+    width: 350px;
+    height: 200px;
+    background-image: url(assets/home-4.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+#circleText {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    right: -75px;
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }  to {
+    -webkit-transform: rotate(359deg);
+    }
+}
+
+/*---------------------------- gallery styles ----------------------------*/
+
+.gallery {
+    width: 100%;
+}
+
+.gallery li {
+    width: calc(100%/3);
+    float: left;
+    display: table;
+}
+
+.gallery li img {
+    width: 100%;
+}
+/*---------------------------- hungry cliets styles ----------------------------*/
+
+.hungryClients {
+    background-color: #dded9a;
+    width: 100%;
+    height: 100%;
+}
+
+.hungryClients p {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7);
+    padding: 0 50px;
+}
+
+.hungryClients i {
+    color: rgba(255,255,255,0.5);
+    font-size: 3rem;
+    position: relative;
+}
+
+.arrow {
+    position: relative;
+    top: 50px;
+    margin: 0 10px;
+}
+ 
+    .arrow:hover {
+        color: white;
+        cursor: pointer;
+    }
+
+blockquote {
+    position: relative;
+}
+
+blockquote::before {
+    color: white;
+    content:'“';
+    font-size: 60px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    font-family: "Lora", serif;
+}
+
+blockquote::after {
+    color: white;
+    content: '”';
+    font-size: 60px;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-family: "Lora", serif;
+}
+
+/*---------------------------- footer styles ----------------------------*/
+
+footer {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+footer .wrapper {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 50px 0px;
+}
+
+footer h2 {
+    color: #64a604;
+}
+
+footer h5 {
+    font-weight: 400;
+}
+
+footer .column {
+    float: left;
+    width: calc((100% / 3) - 40px);
+    margin: 0px 20px;
+}
+
+footer ul, footer p {
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    color: #999999;
+    margin-top: 25px;
+}
+
+footer li {
+    padding: 8px 0px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+ footer li:last-child {
+    border: none;
+ }
+
+footer input[type=text] {
+    background-color: #535353;
+    color: #999999;
+    width: 75%;
+    height: 30px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    margin: 0;
+    padding: 10px;
+}
+
+footer button {
+    color: white;
+    background-color: #64a604;
+    height: 30px;
+    width: 20%;
+    margin: 0;
+    display: inline;
+}
+
+.smallFooter {
+    background-color: #252525;
+    height: 30px;
+}
+
+.smallFooter h5 {
+    padding:  10px 0 10px 0;
+    margin-left: 250px;
+    opacity: 0.5;
+}
+
+.smallFooter h5 span {
+    color: #64a604;
+}
+
+.icons i {
+    padding-right: 10px;
+}
+
+
+/*---------------------------- contact styles ----------------------------*/
+
+.contactWrapper {
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+.contactUs{
+    float: left;
+    width: 60%;
+    padding: 10px;
+    /* background-color: red; */
+}
+
+.contactUs h2 {
+    margin-bottom: 30px;
+}
+
+aside {
+    background-color: #f6f6f6;
+    float: left; 
+    width: 40%;
+    padding: 10px 70px 0px 30px;
+    height: 100%;
+}
+
+aside h2, aside h3 {
+    margin-bottom: 10px
+}
+
+aside > div {
+    margin-bottom: 20px;
+}
+
+aside > p {
+    margin-bottom: 20px;
+}
+
+.contactUs input {
+    background-color: #f6f6f6;
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contactUs .userName, .contactUs .userEmail {
+    float: left;
+    width: 48%;
+    padding: 10px;
+}
+
+.contactUs .userName {
+    margin-right: 4%;
+}
+
+.userSubject {
+    width: 100%;
+    padding: 10px 
+}
+
+.contactUs .userMessage {
+    width: 100%;
+    padding: 10px 10px 100px 10px;
+}
+
+
+.contactUs button {
+    background-color: white;
+    text-transform: uppercase;
+    color:  #64a604;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+/*---------------------------- blog styles ----------------------------*/
+
+.blogWrapper {
+    max-width: 800px;
+    margin: 120px auto;
+}
+
+.blog p, .blog h5 {
+    margin-bottom: 20px;
 }
