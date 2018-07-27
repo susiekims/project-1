@@ -77,16 +77,17 @@ ul {
 header h1 {
     float: left;
 }
+nav {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px 0px;
+}
 
 nav ul {
    text-align: right;
    transform: translateY(50%);
-   margin-left: 50px;
 }
 
-nav {
-    padding: 20px;
-}
 nav li {
     display: inline-block;
     padding-left: 20px;
@@ -183,13 +184,16 @@ nav .quantity {
     margin-bottom: 15px;
 }
 
-.content button {
+.content .greenButton {
+    margin-top: 30px;
+}
+
+.greenButton {
     background-color: #64a604;
     color: white;
     text-transform: uppercase;
     font-size: 1rem;
     padding: 15px 35px;
-    margin-top: 30px;
 }
 
 /*---------------------------- offering styles ----------------------------*/
@@ -296,25 +300,25 @@ blockquote {
     position: relative;
 }
 
-blockquote::before {
-    color: white;
-    content:'“';
-    font-size: 60px;
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    font-family: "Lora", serif;
-}
+    blockquote::before, blockquote::after {
+        color: rgba(255,255,255,0.5);
+        content:'“';
+        font-size: 60px;
+        position: absolute;
+        font-family: "Lora", serif;
+    }
 
-blockquote::after {
-    color: white;
-    content: '”';
-    font-size: 60px;
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
-    font-family: "Lora", serif;
-}
+    blockquote::before {
+        content:'“';
+        left: -10px;
+        top: -10px;
+    }
+
+    blockquote::after {
+        content:'”';
+        right: -10px;
+        bottom: -10px;
+    }
 
 /*---------------------------- footer styles ----------------------------*/
 
@@ -339,8 +343,12 @@ footer h5 {
 
 footer .column {
     float: left;
-    width: calc((100% / 3) - 40px);
-    margin: 0px 20px;
+    width: calc((100% / 3) - 10px);
+}
+
+footer .column2 {
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 footer ul, footer p {
@@ -385,8 +393,9 @@ footer button {
 
 .smallFooter h5 {
     padding:  10px 0 10px 0;
-    margin-left: 250px;
     opacity: 0.5;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .smallFooter h5 span {
@@ -474,11 +483,125 @@ aside > p {
 
 /*---------------------------- blog styles ----------------------------*/
 
-.blogWrapper {
+ .blog.wrapper {
     max-width: 800px;
     margin: 120px auto;
 }
 
-.blog p, .blog h5 {
+.blogPost p, .blogPost h5 {
     margin-bottom: 20px;
+}
+
+.blog section {
+    border-bottom: 1px solid #f6f6f6;
+    padding: 20px 0px;
+}
+
+    .blog section:last-child {
+        border: none;
+    }
+
+.author img {
+    width: 115px;
+    height: 145px;
+    float: left;
+    margin-right: 20px 
+}
+
+.author .bio {
+    background-color: #f6f6f6;
+    width: calc(100% - 115px - 20px);
+    float: left;
+    padding: 15px;
+    min-height: 145px;
+}
+
+.author .bio p {
+    padding-top: 5px
+}
+
+.relatedPosts .post {
+    width: calc((100% / 3) - 20px);
+    float: left;
+}
+
+.relatedPosts img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.post.post2 {
+    margin: 0px 30px;
+}
+
+.relatedPosts h5 {
+    font-weight: 500;
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.7);
+    word-spacing: 0.1rem;;
+}
+
+.relatedPosts h5 span {
+    font-weight: 700;
+    color: rgba(0, 0, 0);
+}
+
+/*---------------------------- comment styles ----------------------------*/
+.comments img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+}
+
+.commentPost {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.speech-bubble { 
+    float: left;
+    max-width: calc(100% - 45px - 30px);
+    position: relative; 
+    background: #efefef;
+    border-radius: .4em; 
+    padding: 20px;
+} 
+
+.speech-bubble:after { 
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    top: 20%; 
+    width: 0; height: 0; 
+    border: 6px solid transparent; 
+    border-right-color: #efefef;
+    border-left: 0; 
+    margin-top: -6px; 
+    margin-left: -6px; 
+}
+
+.comments input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    padding-left: 8px;
+    padding-top: 8px;
+    margin-bottom: 15px;
+}
+
+.comments .name, .comments .email, .comments .website {
+    float: left;
+    width: calc((100% / 3) - 10px);
+    padding-bottom: 8px;
+}
+
+.comments .email {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.comments .comment {
+    width: 100%;
+    padding-bottom: 100px;
 }
