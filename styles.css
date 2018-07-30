@@ -32,7 +32,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, a{
+h1, h2, h3, h4, h5, a{
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -55,10 +55,12 @@ h3 {
 
 h4 {
     font-size: 1rem;
+    font-weight: 700;
 }
 
 h5 {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 p {
@@ -182,7 +184,12 @@ nav .quantity {
     width: 40px;
     margin: 0 auto;
     margin-bottom: 15px;
+    -webkit-transition: width 1s; 
+    transition: width 1s;
 }
+    .content a:hover + .underline {
+        width: 200px;
+    }
 
 .content .greenButton {
     margin-top: 30px;
@@ -228,7 +235,7 @@ nav .quantity {
     background-position: center;
     background-size: cover;
     position: relative;
-    margin: 0 auto;
+    margin: 0px auto 30px auto;
 }
 
 
@@ -253,16 +260,23 @@ nav .quantity {
 
 .gallery {
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .gallery li {
     width: calc(100%/3);
     float: left;
     display: table;
+    margin: 0;
+    padding: 0;
 }
 
 .gallery li img {
     width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 /*---------------------------- hungry cliets styles ----------------------------*/
 
@@ -378,12 +392,12 @@ footer input[type=text] {
 }
 
 footer button {
+    display: inline-block;
     color: white;
     background-color: #64a604;
     height: 30px;
     width: 20%;
     margin: 0;
-    display: inline;
 }
 
 .smallFooter {
@@ -425,23 +439,23 @@ footer button {
     margin-bottom: 30px;
 }
 
-aside {
+
+aside.contact {
     background-color: #f6f6f6;
     float: left; 
     width: 40%;
     padding: 10px 70px 0px 30px;
-    height: 100%;
 }
 
-aside h2, aside h3 {
+aside.contact h2, aside h3 {
     margin-bottom: 10px
 }
 
-aside > div {
+aside.contact > div {
     margin-bottom: 20px;
 }
 
-aside > p {
+aside.contact > p {
     margin-bottom: 20px;
 }
 
@@ -492,6 +506,22 @@ aside > p {
     margin-bottom: 20px;
 }
 
+.tags {
+    line-height: 2.5rem;
+}
+
+.tags h4 span {
+    text-transform: none;
+    font-family: "Lora", serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.tags a {
+    font-size: 1.1rem;
+}
+
 .blog section {
     border-bottom: 1px solid #f6f6f6;
     padding: 20px 0px;
@@ -527,7 +557,7 @@ aside > p {
 
 .relatedPosts img {
     width: 100%;
-    margin-bottom: 15px;
+    margin: 15px 0px;
 }
 
 .post.post2 {
@@ -564,8 +594,8 @@ aside > p {
     max-width: calc(100% - 45px - 30px);
     position: relative; 
     background: #efefef;
-    border-radius: .4em; 
-    padding: 20px;
+    border-radius: .2rem; 
+    padding: 10px;
 } 
 
 .speech-bubble:after { 
@@ -604,4 +634,22 @@ aside > p {
 .comments .comment {
     width: 100%;
     padding-bottom: 100px;
+}
+
+.commentPost h5 {
+    text-transform: none;
+    font-weight: 700;
+}
+
+.commentPost h5 span {
+    font-family: "Lora", serif;
+    font-weight: 400;
+}
+
+.commentPost p {
+    padding: 5px 0px;
+}
+
+.leaveComment > * {
+    padding: 5px 0px;
 }
