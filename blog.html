@@ -12,7 +12,7 @@
 <body>
     <header class="hero blog">
         <nav>
-            <h1>Delicious</h1>    
+            <a href="index.html"><h1>Delicious</h1></a>  
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -21,7 +21,7 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="shop"><a href="#"><i class="fa fa-shopping-bag"></i></a><div class="quantity">2</div></li>
+                <li class="shop"><a href="#" class="quantity"><i class="fa fa-shopping-bag"></i></a></li>
                 <li><a href="#"><i class="fa fa-search"></i></a></li>
             </ul>
         </nav>
@@ -56,18 +56,24 @@
         <section class="relatedPosts clearfix">
             <h3>Related posts</h3>
             <div class="post">
-                <img src="assets/blog-3.jpeg" alt="">
-                <h3>How to bake the perfect cake</h3>
+                <a href="">
+                    <img src="assets/blog-3.jpeg" alt="">
+                    <h3>How to bake the perfect cake</h3>
+                </a>
                 <h5>July 11, 2018 | by <span>Admin</span> | in <span>Recipes</span></h5>
             </div>
             <div class="post post2">
-                <img src="assets/blog-4.jpeg" alt="">
-                <h3>Floral Cupcakes</h3>
+                <a href="">
+                    <img src="assets/blog-4.jpeg" alt="">
+                    <h3>Floral Cupcakes</h3>
+                </a>
                 <h5>July 11, 2018 | by <span>Admin</span> | in <span>Recipes</span></h5>
             </div>
-            <div class="post">
-                <img src="assets/blog-5.jpeg" alt="">
-                <h3>Single post with image</h3>
+            <div class="post post3">
+                <a href="">
+                    <img src="assets/blog-5.jpeg" alt="">
+                    <h3>Single post with image</h3>
+                </a>
                 <h5>July 11, 2018  | by <span>Admin</span> | in <span>Recipes</span></h5>
             </div>
         </section>
@@ -97,11 +103,20 @@
             <div class="leaveComment">
                 <h4>Leave a Comment</h4>
                 <p>Your email address will not be publised. Required fields are marked. *</p>
-                <form action="commentForm">
-                    <input type="text" class="name" placeholder="Name *">
-                    <input type="text" class="email" placeholder="Email *">
-                    <input type="text" class="website" placeholder="Your website">
-                    <input type="text" class="comment" placeholder="Comment">
+                <form action="" class="commentForm">
+
+                    
+                    <label for="name" class="visuallyhidden">Your Name</label>
+                    <input type="text" class="name" method="POST" name="name" id="name"  placeholder="Name *">
+
+                    <label for="email" class="visuallyhidden">Your Email</label>
+                    <input type="email" class="email" method="POST" name="email" id="email" placeholder="Email *">
+
+                    <label for="website" class="visuallyhidden">Your Website</label>
+                    <input type="text" class="website" method="POST" name="website" id="website"  placeholder="Your website">
+
+                    <label for="comment" class="visuallyhidden">Write your comment</label>
+                    <textarea class="comment" method="POST" name="comment" id="comment" placeholder="Comment"></textarea>
                     <button class="greenButton">Submit comment</button>
                 </form>
             </div>
@@ -135,15 +150,15 @@
                 <p>Get all of our newest recipes immediately in your inbox!</p>
                 <ul>
                     <li>
-                        <input type="text" placeholder="Enter your email">
-                        <button class=emailButton><i class="fas fa-arrow-right"></i></button>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class=emailButton><i class="fas fa-arrow-right"></i></button>
                     </li>
                 </ul>  
                 <div class="icons">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                </div>  
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div> 
             </div>
         </section>
         <section class="smallFooter">
