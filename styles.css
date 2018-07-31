@@ -19,14 +19,13 @@ font-family: 'Raleway', sans-serif; */
 
 /*
 TO DO LIST:
--add labels for accessibility to forms
--change buttons in forms to input[type=submit]
--remove unneccesary nested h4/h5 for a tags
--fix background for aside in Contact page
--make DELICIOUS in header a link
--change form input to textareas
--change underline to ::after
--change 2 icon in nav to ::after
+- DONE add labels for accessibility to forms
+- remove unneccesary nested h4/h5 for a tags
+- DONE fix background for aside in Contact page
+- DONE make DELICIOUS in header a link
+- DONEchange form input to textareas
+- DONE change underline to ::after
+- DONE change 2 icon in nav to ::after
 */
 
 /*---------------------------- general styles ----------------------------*/
@@ -75,6 +74,10 @@ h5 {
     font-weight: 500;
 }
 
+h6 {
+    font-size: 0.7rem;
+}
+
 p {
     font-size: 0.9rem;
     font-family: 'Lora', serif;
@@ -108,7 +111,7 @@ input:focus, textarea:focus {
 nav {
     max-width: 1200px;
     margin: 0px auto;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 header h1 {
@@ -131,7 +134,7 @@ nav li i {
 nav li a {
     font-size: 1.1rem;
     font-weight: 700;
-    padding: 0px 10px;
+    padding: 0px 8px;
 }
     nav a:hover {
         color: #64a604;
@@ -186,6 +189,10 @@ nav .quantity::after {
 }
 
 /*---------------------------- homepage box styles ----------------------------*/
+
+.boxContainer {
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+}
 
 .box {
     float: left;
@@ -421,7 +428,7 @@ footer {
 }
 
 footer .wrapper {
-    max-width: 800px;
+    max-width: 62.5%;
     margin: 0px auto;
     padding: 50px 0px;
 }
@@ -492,7 +499,7 @@ footer button {
 .smallFooter h5 {
     padding:  10px 0 10px 0;
     opacity: 0.5;
-    max-width: 800px;
+    max-width: 62.5%;
     margin: 0 auto;
 }
 
@@ -586,7 +593,7 @@ aside.contact li {
 /*---------------------------- blog styles ----------------------------*/
 
  .blog.wrapper {
-    max-width: 800px;
+    max-width: 62.5%
     margin: 120px auto;
 }
 
