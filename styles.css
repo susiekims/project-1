@@ -3,31 +3,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-/* 
-font-family: 'Lora', serif;
-
-font-family: 'Raleway', sans-serif; */
-
-/*
-TO DO LIST:
-- DONE add labels for accessibility to forms
-- remove unneccesary nested h4/h5 for a tags
-- DONE fix background for aside in Contact page
-- DONE make DELICIOUS in header a link
-- DONEchange form input to textareas
-- DONE change underline to ::after
-- DONE change 2 icon in nav to ::after
-*/
-
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; border: none;}
 /*---------------------------- general styles ----------------------------*/
 html {
     font-size: 62.5%;
@@ -51,7 +27,7 @@ h1, h2, h3, h4, h5, a{
 
 h1 {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h2 {
@@ -70,26 +46,26 @@ h4 {
 }
 
 h5 {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.8rem;
 }
 
 h6 {
-    font-size: 0.7rem;
+    font-size: 0.73rem;
 }
 
 p {
-    font-size: 0.9rem;
+    font-size: 0.93rem;
     font-family: 'Lora', serif;
     color: #999999;
-    line-height: 1.8;
+    line-height: 1.9;
+    letter-spacing: 0.05;
 }
 
 ul {
     list-style-type: none;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, button:focus {
     box-shadow: 0px 0px 1.5px #64a604;
 }
 
@@ -109,7 +85,7 @@ input:focus, textarea:focus {
 /*---------------------------- header styles ----------------------------*/
 
 nav {
-    max-width: 1200px;
+    max-width: 93.75%; /* The PSD width of the nav was 1200ps, I divided it by 1280 (my laptop width) to get a percentage that looked like the mockup*/
     margin: 0px auto;
     padding-top: 15px;
 }
@@ -136,8 +112,9 @@ nav li a {
     font-weight: 700;
     padding: 0px 8px;
 }
-    nav a:hover {
-        color: #64a604;
+
+nav a:hover {
+    color: #64a604;
 }
 
 nav li.shop {
@@ -226,7 +203,6 @@ nav .quantity::after {
 }
 
 .content h2 {
-    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -239,9 +215,10 @@ nav .quantity::after {
     -webkit-transition: width 1s; 
     transition: width 1s;
 }
-    .content a:hover + .underline {
-        width: 200px;
-    }
+
+.content a:hover + .underline {
+    width: 200px;
+}
 
 .content .greenButton {
     margin-top: 30px;
@@ -254,13 +231,14 @@ nav .quantity::after {
     font-size: 1rem;
     padding: 15px 35px;
 }
-    .greenButton:hover {
-        background-color: #64a690;
-    }
 
-    .greenButton:active {
-        border: inset rgba(0, 0, 0, 0.1) 1px;
-    }
+.greenButton:hover {
+    background-color: #64a690;
+}
+
+.greenButton:active {
+    border: inset rgba(0, 0, 0, 0.1) 1px;
+}
 
 /*---------------------------- offering styles ----------------------------*/
 
@@ -327,20 +305,13 @@ nav .quantity::after {
     height: 150px;
     top: -75px;
     right: -75px;
-    animation-name: rotate;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    transition: animation-duration 4s;
-}
-
-#circleText:hover {
-    animation-duration: 3s;
+    -webkit-animation: rotate linear infinite 4s;
+    animation: rotate linear infinite 4s;
 }
 
 @keyframes rotate {
     from {
-        -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     }  to {
     -webkit-transform: rotate(359deg);
     }
@@ -348,35 +319,34 @@ nav .quantity::after {
 
 /*---------------------------- gallery styles ----------------------------*/
 
-.gallery {
-    width: 100%;
-
-}
 
 .gallery li {
     width: calc(100%/3);
     float: left;
-    margin: 0;
-    padding: 0;
 }
 
 .gallery li img {
     width: 100%;
     display: block;
 }
+
+.gallery li {
+}
+
+
 /*---------------------------- hungry cliets styles ----------------------------*/
 
 .hungryClients {
     background-color: #dded9a;
     width: 100%;
-    height: 100%;
 }
 
 .hungryClients p {
     font-size: 1.6rem;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.7);
+    color: #000000;
     padding: 0 50px;
+    line-height: 1.5;
 }
 
 .hungryClients i {
@@ -384,6 +354,7 @@ nav .quantity::after {
     font-size: 3rem;
     position: relative;
 }
+
 
 .arrow {
     position: relative;
@@ -428,7 +399,7 @@ footer {
 }
 
 footer .wrapper {
-    max-width: 62.5%;
+    max-width: 62.5%; /* 800px / 1280px (my screen dimensions) = 62.5 */
     margin: 0px auto;
     padding: 50px 0px;
 }
@@ -437,18 +408,13 @@ footer h2 {
     color: #64a604;
 }
 
-footer h5 {
-    font-weight: 400;
-}
-
 footer .column {
     float: left;
     width: calc((100% / 3) - 60px);
 }
 
 footer .column2 {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin: 0px 90px;
 }
 
 footer ul, footer p {
@@ -523,7 +489,6 @@ footer .icons i {
     float: left;
     width: 60%;
     padding-right: 10px;
-    /* background-color: red; */
 }
 
 .contactForm {
@@ -541,13 +506,12 @@ aside.contact {
 }
 
 .contactInfo {
-    width: 50%;
-    margin: 70px 2% 70px 30px;
+    width: 200px;
+    margin: 70px 2% 40px 30px;
 }
 
-
 .contactInfo > * {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 aside.contact li {
@@ -557,9 +521,13 @@ aside.contact li {
 .contactUs input, .contactUs textarea {
     background-color: #f6f6f6;
     font-family: "Lora", serif;
-    font-size: 1.2rem;
+    font-size: 0.933rem;
     margin-bottom: 20px;
     padding: 10px;
+}
+
+.contactUs button:hover {
+   text-decoration: underline;
 }
 
 .contactUs .name, .contactUs .email {
@@ -581,19 +549,18 @@ aside.contact li {
     resize: none;
 }
 
-
 .contactUs button {
     background-color: white;
     text-transform: uppercase;
     color:  #64a604;
     font-size: 1rem;
-    letter-spacing: 0.05rem;
+    font-weight: 600;
 }
 
 /*---------------------------- blog styles ----------------------------*/
 
  .blog.wrapper {
-    max-width: 62.5%
+    max-width: 62.5%;
     margin: 120px auto;
 }
 
@@ -630,14 +597,14 @@ aside.contact li {
     width: 115px;
     height: 145px;
     float: left;
-    margin-right: 20px 
+    margin-right: 20px;
 }
 
 .author .bio {
     background-color: #f6f6f6;
     width: calc(100% - 115px - 20px);
     float: left;
-    padding: 15px;
+    padding: 25px 30px;
     min-height: 145px;
 }
 
@@ -705,16 +672,14 @@ aside.contact li {
     border: 6px solid transparent; 
     border-right-color: #efefef;
     border-left: 0; 
-    margin-top: -6px; 
-    margin-left: -6px; 
+    margin: -6px 0px 0px -6px;
 }
 
 .comments input, .comments textarea {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #efefef;
     font-family: "Lora", serif;
     font-size: 1rem;
-    padding-left: 8px;
-    padding-top: 8px;
+    padding: 8px 0px 0px 8px;
     margin-bottom: 15px;
     resize: none;
 }
@@ -726,18 +691,18 @@ aside.contact li {
 }
 
 .comments .email {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0px 15px;
 }
 
-.comments .comment {
+.comments textarea.comment {
     width: 100%;
-    height: 150px;
+    height: 120px;
 }
 
 .commentPost h5 {
     text-transform: none;
     font-weight: 700;
+    font-size: 0.93rem;
 }
 
 .commentPost h5 span {
