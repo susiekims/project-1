@@ -147,23 +147,23 @@ nav .quantity::after {
 }
 
 .hero.home {
-    background-image: url(assets/home-1.jpeg);
+    background-image: url(../assets/home-1.jpeg);
     height: 100vh;
     background-attachment: fixed;
 } 
 
 .hero.blog {
-    background-image: url(assets/blog-1.jpeg);
+    background-image: url(../assets/blog-1.jpeg);
     height: 60vh;
 }
 
 .hero.contact1 {
-    background-image: url(assets/contact-1.jpeg);
+    background-image: url(../assets/contact-1.jpeg);
     height: 60vh;
 }
 
 .hero.contact2 {
-    background-image: url(assets/contact-2.jpeg);
+    background-image: url(../assets/contact-2.jpeg);
     height: 60vh;
 }
 
@@ -187,11 +187,11 @@ nav .quantity::after {
 }
 
 .box2 {
-    background-image: url(assets/home-2.jpeg);
+    background-image: url(../assets/home-2.jpeg);
 }
 
 .box3 {
-    background-image: url(assets/home-3.jpeg);
+    background-image: url(../assets/home-3.jpeg);
 }
 
 .box4 {
@@ -235,7 +235,7 @@ nav .quantity::after {
 }
 
 .greenButton:hover {
-    background-color: darkpurple;
+    opacity: 0.5;
 }
 
 .greenButton:active {
@@ -264,27 +264,27 @@ nav .quantity::after {
 }
 
 .offerings .vegetarian {
-    background-image: url(assets/lemon-solid.svg);
+    background-image: url(../assets/lemon-solid.svg);
 }
 
 .offerings .salads {
-    background-image: url(assets/leaf-solid.svg);
+    background-image: url(../assets/leaf-solid.svg);
 }
 
 .offerings .drinks {
-    background-image: url(assets/glass-martini-solid.svg);
+    background-image: url(../assets/glass-martini-solid.svg);
 }
 
 .offerings .desserts {
-    background-image: url(assets/coffee-solid.svg);
+    background-image: url(../assets/coffee-solid.svg);
 }
 
 .offerings .appetizers {
-    background-image: url(assets/utensils-solid.svg);
+    background-image: url(../assets/utensils-solid.svg);
 }
 
 .offerings .sideDishes {
-    background-image: url(assets/utensil-spoon-solid.svg);
+    background-image: url(../assets/utensil-spoon-solid.svg);
 }
 
 /*---------------------------- Our Restaurant styles ----------------------------*/
@@ -292,7 +292,7 @@ nav .quantity::after {
 .contentImg {
     width: 350px;
     height: 200px;
-    background-image: url(assets/home-4.jpeg);
+    background-image: url(../assets/home-4.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
