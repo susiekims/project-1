@@ -4,7 +4,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0; border: none;}
+
 /*---------------------------- general styles ----------------------------*/
+
 html {
     font-size: 62.5%;
 }
@@ -97,6 +99,7 @@ header h1 {
 nav ul {
    float: right;
    transform: translateY(50%);
+   display: inline-block;
 }
 
 nav li {
@@ -132,7 +135,6 @@ nav .quantity::after {
     color: white;
     border-radius: 50%;
     text-align: center;
-    font-size: 1rem;
 }
 
 /*---------------------------- hero styles ----------------------------*/
@@ -233,7 +235,7 @@ nav .quantity::after {
 }
 
 .greenButton:hover {
-    background-color: #64a690;
+    background-color: darkpurple;
 }
 
 .greenButton:active {
@@ -287,7 +289,6 @@ nav .quantity::after {
 
 /*---------------------------- Our Restaurant styles ----------------------------*/
 
-
 .contentImg {
     width: 350px;
     height: 200px;
@@ -297,7 +298,6 @@ nav .quantity::after {
     position: relative;
     margin: 0px auto 30px auto;
 }
-
 
 #circleText {
     position: absolute;
@@ -319,20 +319,45 @@ nav .quantity::after {
 
 /*---------------------------- gallery styles ----------------------------*/
 
-
 .gallery li {
     width: calc(100%/3);
     float: left;
+    position: relative;
 }
 
 .gallery li img {
     width: 100%;
     display: block;
+    
 }
 
-.gallery li {
+.overlay {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 10px;	
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 1s;
 }
 
+.instagramIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
+
+.gallery li .overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
 
 /*---------------------------- hungry cliets styles ----------------------------*/
 
@@ -355,41 +380,40 @@ nav .quantity::after {
     position: relative;
 }
 
-
 .arrow {
     position: relative;
     top: 50px;
     margin: 0 10px;
 }
  
-    .arrow:hover {
-        color: white;
-        cursor: pointer;
-    }
+.arrow:hover {
+    color: white;
+    cursor: pointer;
+}
 
 blockquote {
     position: relative;
 }
 
-    blockquote::before, blockquote::after {
-        color: rgba(255,255,255,0.5);
-        content:'“';
-        font-size: 60px;
-        position: absolute;
-        font-family: "Lora", serif;
-    }
+blockquote::before, blockquote::after {
+    color: rgba(255,255,255,0.5);
+    content:'“';
+    font-size: 60px;
+    position: absolute;
+    font-family: "Lora", serif;
+}
 
-    blockquote::before {
-        content:'“';
-        left: -10px;
-        top: -10px;
-    }
+blockquote::before {
+    content:'“';
+    left: -10px;
+    top: -10px;
+}
 
-    blockquote::after {
-        content:'”';
-        right: -10px;
-        bottom: -10px;
-    }
+blockquote::after {
+    content:'”';
+    right: -10px;
+    bottom: -10px;
+}
 
 /*---------------------------- footer styles ----------------------------*/
 
@@ -589,9 +613,9 @@ aside.contact li {
     padding: 20px 0px;
 }
 
-    .blog section:last-child {
-        border: none;
-    }
+.blog section:last-child {
+    border: none;
+}
 
 .author img {
     width: 115px;
@@ -617,16 +641,17 @@ aside.contact li {
     float: left;
 }
 
-.relatedPosts img {
-    width: 100%;
-    margin: 15px 0px;
-}
-
-.relatedPosts a:hover {
+.relatedPosts figcaption a:hover {
     color: #64a604;
+    cursor: pointer;
 }
 .post.post2 {
     margin: 0px 30px;
+}
+
+.relatedPosts img {
+    width: 100%;
+    margin: 15px 0px;
 }
 
 .relatedPosts h5 {
@@ -716,4 +741,8 @@ aside.contact li {
 
 .leaveComment > * {
     padding: 5px 0px;
+}
+
+.leaveComment p {
+    font-style: italic;
 }
